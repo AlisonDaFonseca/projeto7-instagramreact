@@ -1,14 +1,14 @@
 
 export default function Story() {
     let listaStory = [
-        { usuario: "9gag", imagem: "assets/img/9gag.svg", alt: "9gag" },
-        { usuario: "meowed", imagem: "assets/img/meowed.svg", alt: "meowed" },
-        { usuario: "barked", imagem: "assets/img/barked.svg", alt: "barked" },
-        { usuario: "nathanwpylestrangeplanet", imagem: "assets/img/nathanwpylestrangeplanet.svg", alt: "nathanwpylestrangeplanet" },
-        { usuario: "wawawicomics", imagem: "assets/img/wawawicomics.svg", alt: "wawawicomics" },
-        { usuario: "respondeai", imagem: "assets/img/respondeai.svg", alt: "respondeai" },
-        { usuario: "filomoderna", imagem: "assets/img/filomoderna.svg", alt: "filomoderna" },
-        { usuario: "memeriagourmet", imagem: "assets/img/memeriagourmet.svg", alt: "memeriagourmet" }
+        { usuario: "9gag", imagem: "assets/img/9gag.svg"},
+        { usuario: "meowed", imagem: "assets/img/meowed.svg"},
+        { usuario: "barked", imagem: "assets/img/barked.svg"},
+        { usuario: "nathanwpylestrangeplanet", imagem: "assets/img/nathanwpylestrangeplanet.svg"},
+        { usuario: "wawawicomics", imagem: "assets/img/wawawicomics.svg"},
+        { usuario: "respondeai", imagem: "assets/img/respondeai.svg"},
+        { usuario: "filomoderna", imagem: "assets/img/filomoderna.svg"},
+        { usuario: "memeriagourmet", imagem: "assets/img/memeriagourmet.svg"}
     ];
 
     return (
@@ -16,7 +16,7 @@ export default function Story() {
             {listaStory.map(story => (
                 <div class="story">
                     <div class="imagem">
-                        <img src={story.imagem} alt={story.alt} />
+                        <img src={story.imagem} alt={story.usuario} />
                     </div>
                     <div class="usuario">
                         {story.usuario}
