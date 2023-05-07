@@ -175,9 +175,12 @@ body {
 .post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong, .usuario ion-icon, .usuario > img, .conteudo > img {
   cursor: pointer;
 }
-
+.post .conteudo{
+  position: relative;
+}
 .post .conteudo img {
   width: 100%;
+  
 }
 
 .post .fundo .acoes {
@@ -307,4 +310,21 @@ ion-icon {
 
 .vermelho{
   color: red;
+}
+.escondido{
+  display: none;
+}
+.heart-curtida, .heart-animacao{
+  color: white;
+  position: absolute;
+  top: 210px;
+  left: 180px;
+  font-size: 250px;
+}
+.heart-curtida{
+  scale: 0.2;
+}
+.heart-animacao{
+  scale: 1.0;
+  transition: all 0.3s;
 }

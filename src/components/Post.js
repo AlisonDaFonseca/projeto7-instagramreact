@@ -4,6 +4,8 @@ export default function Post(props) {
 
 
     const [classeCor, setClasseCor] = useState("");
+    const [classeHeart, setClasseheart] = useState("escondido");
+    const [animation, setAnimation] = useState("heart-curtida")
     const [heart, setHeart] = useState("heart-outline");
     const [salvarPost, setSalvarPost] = useState("bookmark-outline");
     const [qtdLikes, setQtdLikes] = useState(props.numeroCurtida);
@@ -37,6 +39,13 @@ export default function Post(props) {
             setClasseCor("vermelho");
             setHeart("heart");
             setQtdLikes(qtdLikes + 1);
+            setClasseheart("heart-curtida");
+            setTimeout(() => {
+                setClasseheart("heart-animacao");
+            }, 50); 
+            setTimeout(() => {
+                setClasseheart("escondido");
+            }, 500); 
         } 
     }
 
@@ -57,6 +66,8 @@ export default function Post(props) {
 
                 <div className="conteudo">
                     <img data-test="post-image" onDoubleClick={likeImagem} src={props.imagePost} alt={props.altPost} />
+                    <ion-icon name="heart" class={classeHeart} ></ion-icon>
+
                 </div>
 
                 <div className="fundo">
