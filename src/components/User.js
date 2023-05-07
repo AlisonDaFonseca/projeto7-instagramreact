@@ -17,8 +17,8 @@ export default function User() {
         <div className="usuario">
             <img data-test="profile-image" src={imagem ? `${imagem}` : "assets/img/catanacomics.svg"} alt="imagem de perfil" onClick={perguntarLinkImagem}/>
             <div className="texto">
-                <span data-test="name">
-                    <strong>{nome ? `${nome}` : 'catanacomics'}</strong>
+                <span>
+                    <strong data-test="name">{nome ? `${nome}` : 'catanacomics'}</strong>
                     <ion-icon test="edit-name" name="pencil" onClick={perguntarNome}></ion-icon>
                 </span>
             </div>
