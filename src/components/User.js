@@ -14,12 +14,12 @@ export default function User() {
     }
 
     return (
-        <div class="usuario">
-            <img src={imagem ? `${imagem}` : "assets/img/catanacomics.svg"} alt="imagem de perfil" onClick={perguntarLinkImagem}/>
-            <div class="texto">
-                <span>
+        <div className="usuario">
+            <img data-test="profile-image" src={imagem ? `${imagem}` : "assets/img/catanacomics.svg"} alt="imagem de perfil" onClick={perguntarLinkImagem}/>
+            <div className="texto">
+                <span data-test="name">
                     <strong>{nome ? `${nome}` : 'catanacomics'}</strong>
-                    <ion-icon name="pencil" onClick={perguntarNome}></ion-icon>
+                    <ion-icon test="edit-name" name="pencil" onClick={perguntarNome}></ion-icon>
                 </span>
             </div>
         </div>

@@ -44,37 +44,37 @@ export default function Post(props) {
 
     return (
         <>
-            <div key={props.imageUser} class="post">
-                <div class="topo">
-                    <div class="usuario">
+            <div data-test="post" className="post" >
+                <div className="topo">
+                    <div className="usuario">
                         <img src={props.imageUser} alt={props.nomeUser} />
                         {props.nomeUser}
                     </div>
-                    <div class="acoes">
+                    <div className="acoes">
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
                 </div>
 
-                <div class="conteudo">
-                    <img onDoubleClick={likeImagem} src={props.imagePost} alt={props.altPost} />
+                <div className="conteudo">
+                    <img data-test="post-image" onDoubleClick={likeImagem} src={props.imagePost} alt={props.altPost} />
                 </div>
 
-                <div class="fundo">
+                <div className="fundo">
                     <div className="acoes">
                         <div>
-                            <ion-icon onClick={likeIcone} name={heart} class={classeCor} ></ion-icon>
+                            <ion-icon data-test="like-post" onClick={likeIcone} name={heart} class={classeCor} ></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
                         <div>
-                            <ion-icon onClick={salvaPost} name={salvarPost}></ion-icon>
+                            <ion-icon data-test="save-post" onClick={salvaPost} name={salvarPost}></ion-icon>
                         </div>
                     </div>
 
-                    <div class="curtidas">
+                    <div className="curtidas">
                         <img src={props.imageCurtiu} alt={props.nomeCurtiu} />
-                        <div class="texto">
-                            Curtido por <strong>{props.nomeCurtiu}</strong> e <strong>outras {qtdLikes} pessoas</strong>
+                        <div className="texto">
+                            Curtido por <strong>{props.nomeCurtiu}</strong> e <strong data-test="likes-number">outras {qtdLikes} pessoas</strong>
                         </div>
                     </div>
                 </div>

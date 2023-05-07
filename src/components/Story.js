@@ -12,18 +12,18 @@ export default function Story() {
     ];
 
     return (
-        <div class="stories">
+        <div className="stories">
             {listaStory.map(story => (
-                <div class="story">
-                    <div class="imagem">
+                <div key={story.usuario} className="story">
+                    <div className="imagem">
                         <img src={story.imagem} alt={story.usuario} />
                     </div>
-                    <div class="usuario">
+                    <div className="usuario">
                         {story.usuario}
                     </div>
                 </div>
             ))}
-            <div class="setinha">
+            <div className="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
         </div>

@@ -7,7 +7,7 @@ let listPost = [
 
 export default function Posts() {
     return (
-        <div class="posts">
+        <div className="posts">
             
             {listPost.map(Post)}
         </div>

@@ -9,23 +9,23 @@ export default function Suggestion() {
     ];
 
     return (
-        <div class="sugestoes">
-            <div class="titulo">
+        <div className="sugestoes">
+            <div className="titulo">
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
 
             {listaSuggestion.map(suggestion => (
-                <div class="sugestao">
-                    <div class="usuario">
+                <div key={suggestion.imagemUsuario} className="sugestao">
+                    <div className="usuario">
                         <img src={suggestion.imagemUsuario} alt={suggestion.nome} />
-                        <div class="texto">
-                            <div class="nome">{suggestion.nome}</div>
-                            <div class="razao">{suggestion.razao}</div>
+                        <div className="texto">
+                            <div className="nome">{suggestion.nome}</div>
+                            <div className="razao">{suggestion.razao}</div>
                         </div>
                     </div>
 
-                    <div class="seguir">Seguir</div>
+                    <div className="seguir">Seguir</div>
                 </div>
             ))}
 
