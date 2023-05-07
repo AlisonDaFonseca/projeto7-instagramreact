@@ -19,7 +19,7 @@ export default function User() {
             <div className="texto">
                 <span>
                     <strong data-test="name">{nome ? `${nome}` : 'catanacomics'}</strong>
-                    <ion-icon test="edit-name" name="pencil" onClick={perguntarNome}></ion-icon>
+                    <ion-icon data-test="edit-name" name="pencil" onClick={perguntarNome}></ion-icon>
                 </span>
             </div>
         </div>
